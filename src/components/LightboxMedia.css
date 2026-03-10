@@ -7,6 +7,7 @@
   z-index: 20;
   background-color: rgb(255, 255, 255);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   visibility: hidden;
@@ -20,6 +21,25 @@
   /* border: solid pink 1px; */
 }
 
+.lightbox-close-div {
+  display: flex;
+  justify-content: end;
+  width: 80%;
+}
+
+.lightbox-nav-media-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
 .lightbox-media {
   max-height: 800px;
+}
+
+.lightbox-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
