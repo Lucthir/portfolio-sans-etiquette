@@ -20,9 +20,7 @@ function Home() {
           <h1>MARTIN MORDA-COTEL</h1>
         </div>
         <div className="caroussel-div">
-          {/* <h2>CAROUSSEL</h2> */}
           <Carousel></Carousel>
-          {/* <EmblaCarousel></EmblaCarousel> */}
         </div>
         <div className="categories-div">
           <div className="videos-category-div category-div">
@@ -45,50 +43,6 @@ function Home() {
           </video>
         </div>
       </div>
-      {/* <div className="hero">
-        <div className="hero-filter"></div>
-        <div className="hero_background">
-          <img src={mainBackground} alt="" className="hero-background-img" />
-        </div>
-      </div>
-      <div className="categories">
-        <div className="category-div portraits">
-          <div className="category-div-pack">
-            <div className="category-illustration-filter"></div>
-            <img src={portraitsIllustration} alt="" className="category-illustration portraits-illustration" />
-          </div>
-        </div>
-        <div className="category-div category2">
-          <div className="category-div-pack">
-            <div className="category-illustration-filter"></div>
-            <img src={category2Illustration} alt="" className="category-illustration category2-illustration" />
-          </div>
-        </div>
-        <div className="category-div category3">
-          <div className="category-div-pack">
-            <div className="category-illustration-filter"></div>
-            <img src={category3Illustration} alt="" className="category-illustration category3-illustration" />
-          </div>
-        </div>
-        <div className="category-div category4">
-          <div className="category-div-pack">
-            <div className="category-illustration-filter"></div>
-            <img src={category4Illustration} alt="" className="category-illustration category4-illustration" />
-          </div>
-        </div>
-      </div>
-      <div className="biography">
-        <div className="bio-photo-div">
-          <img src={bioPhotography} alt="" className="bio-photo" />
-        </div>
-        <div className="bio-text-div">
-          <p className="bio-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 }
