@@ -5,7 +5,7 @@ import VideoProjects from "./pages/VideoProjects";
 import PhotoProjects from "./pages/PhotoProjects";
 import VideoProjectGallery from "./pages/VideoProjectGallery";
 import PhotoProjectGallery from "./pages/PhotoProjectGallery";
-import MenuIcon from "./assets/icons/burger-bar.png";
+import MenuIcon from "./assets/icons/burger_white.png";
 import Menu from "./components/Menu";
 import { Link } from "react-router-dom";
 import "./App.css";
