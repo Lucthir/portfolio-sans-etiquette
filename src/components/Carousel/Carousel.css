@@ -1,0 +1,49 @@
+.carousel-main-div {
+  width: 100%;
+  height: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, #111111 45%, #111111 55%, transparent 100%);
+}
+
+.carousel-content-div {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.5s ease;
+  touch-action: pan-left;
+}
+
+.carousel-nav-div {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.carousel-nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.carousel-nav-btn img {
+  width: 24px; /* ajuste selon ta taille */
+}
+
+.carousel-nav-btn:hover {
+  transform: scale(1.2);
+}
+
+.carousel-dots-div {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.carousel-dot:hover {
+  cursor: pointer;
+}

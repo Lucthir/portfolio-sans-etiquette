@@ -1,0 +1,25 @@
+.lightbox-main-div {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.lightbox-open {
+  visibility: visible;
+}
+
+.lightbox-content-div {
+  /* border: solid pink 1px; */
+}
+
+.lightbox-media {
+  max-height: 800px;
+}

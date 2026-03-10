@@ -1,0 +1,27 @@
+.header {
+  position: fixed;
+  z-index: 15;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+}
+
+#open-menu-btn {
+  background-color: transparent;
+  border: none;
+}
+
+#open-menu-btn:hover {
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 25px;
+  color: white;
+}
+
+.header-logo {
+  text-decoration: none;
+  color: white;
+}

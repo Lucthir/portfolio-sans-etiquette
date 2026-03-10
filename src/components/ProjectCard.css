@@ -1,0 +1,28 @@
+.project-card-main-div {
+  width: 85%;
+  height: 800px;
+  outline: white 2px solid;
+  position: relative;
+}
+
+.project-card-main-div:hover .project-illustration-filter {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.project-illustration-filter {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-illustration {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

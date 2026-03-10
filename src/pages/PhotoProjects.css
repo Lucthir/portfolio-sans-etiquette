@@ -1,0 +1,14 @@
+.photos-main-div {
+  background-color: rgb(32, 32, 32);
+  margin: 0;
+  color: white;
+  padding: 100px 30px;
+}
+
+.photos-content-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
