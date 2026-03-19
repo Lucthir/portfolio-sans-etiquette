@@ -7,14 +7,15 @@ function VideoProjectGallery({ projectId }) {
   const { slug } = useParams();
   const [files, setFiles] = useState([]);
   useEffect(() => {
-    listS3Files(`gallery/videos/${slug}/`).then(setFiles);
+    listS3Files(`gallery/videos/${slug}/fullscale`).then(setFiles);
   }, [slug]);
   return (
-    <div>
-      {files.map((url) => (
-        <video key={url} src={url} controls width="600" />
-      ))}
-      Coucou {slug}
+    <div className="video-project-main-div">
+      <div className="video-project-content-div">
+        {files.map((url) => (
+          <video key={url} src={url} controls className="video-project-media" />
+        ))}
+      </div>
     </div>
   );
 }

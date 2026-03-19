@@ -9,7 +9,7 @@ import ArrowForward from "./../../assets/icons/arrow_forward.png";
 
 function Carousel() {
   const photos = [
-    `${AWS_CONFIG.CDN_URL}/static/home/martin_test_bio.jpg`,
+    // `${AWS_CONFIG.CDN_URL}/static/home/martin_test_bio.jpg`,
     `${AWS_CONFIG.CDN_URL}/static/home/mountains.jpg`,
     `${AWS_CONFIG.CDN_URL}/static/home/cocktails.jpg`,
     `${AWS_CONFIG.CDN_URL}/static/home/test_main_bg.png`,

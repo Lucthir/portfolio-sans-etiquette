@@ -19,7 +19,7 @@ function LightboxMedia({ photos, currentIndex, onClose, onPrev, onNext, isOpen }
           </button>
         </div>
         <div className="lightbox-content-div">
-          <img src={photos[currentIndex]} alt="" className="lightbox-media" />
+          <img key={currentIndex} src={photos[currentIndex] ?? ""} alt="" className="lightbox-media" />
         </div>
         <div className="lightbox-next-div">
           <button className="lightbox-btn lightbox-next-btn" onClick={onNext}>

@@ -9,6 +9,7 @@ import MenuIcon from "./assets/icons/burger_white.png";
 import Menu from "./components/Menu";
 import { Link } from "react-router-dom";
 import "./App.css";
+import BackButton from "./components/BackButton";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,16 +18,21 @@ export default function App() {
     <BrowserRouter>
       <Menu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
       <div className="header">
-        <button
-          id="open-menu-btn"
-          onClick={() => {
-            setMenuOpen(!menuOpen);
-          }}>
-          <img src={MenuIcon} alt="" className="menu-icon" />
-        </button>
-        <Link to="/" className="header-logo">
-          MARTIN MORDA-COTEL
-        </Link>
+        <div className="header-top">
+          <button
+            id="open-menu-btn"
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+            }}>
+            <img src={MenuIcon} alt="" className="menu-icon" />
+          </button>
+          <Link to="/" className="header-logo">
+            MARTIN MORDA-COTEL
+          </Link>
+        </div>
+        <div className="header-bottom">
+          <BackButton></BackButton>
+        </div>
       </div>
       <Routes>
         <Route path="/" element={<Home />} />

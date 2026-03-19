@@ -16,7 +16,7 @@ function PhotoProjects() {
           return {
             slug,
             title: meta.title,
-            cover: `${AWS_CONFIG.CDN_URL}/gallery/photos/${slug}/${meta.cover}`,
+            cover: `${AWS_CONFIG.CDN_URL}/gallery/photos/${slug}/thumbnails/${meta.cover}`,
             description: meta.description,
           };
         }),
@@ -27,7 +27,6 @@ function PhotoProjects() {
 
   return (
     <div className="photos-main-div">
-      <Link to="/">Back</Link>
       <div className="photos-content-div">
         {projects.map(({ slug, title, cover, description }) => (
           <ProjectCard key={slug} slug={slug} projectType="photos" projectName={title} projectIllustration={cover} projectDescription={description}></ProjectCard>
