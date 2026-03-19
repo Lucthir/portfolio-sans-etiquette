@@ -32,7 +32,6 @@ function Carousel() {
 
   const next = () => setCarouselIndex((prev) => (prev === LAST_REAL ? FIRST_REAL : prev + 1));
   const prev = () => setCarouselIndex((prev) => (prev === FIRST_REAL ? LAST_REAL : prev - 1));
-  console.log(carouselIndex);
 
   return (
     <div className="carousel-main-div">
