@@ -14,6 +14,9 @@ function Menu({ isOpen, onClose }) {
         <Link to="/photos" className="menu-btn" onClick={onClose}>
           PROJETS PHOTO
         </Link>
+        <Link to="/photos" className="menu-btn" onClick={onClose}>
+          CONTACT
+        </Link>
       </div>
     </div>
   );

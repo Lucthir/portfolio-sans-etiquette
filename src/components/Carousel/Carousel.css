@@ -7,6 +7,9 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.carousel-mask-content-div {
   mask-image: linear-gradient(to right, transparent 0%, #111111 45%, #111111 55%, transparent 100%);
 }
 
@@ -21,6 +24,9 @@
   display: flex;
   gap: 50px;
   margin-top: 20px;
+  position: absolute;
+  justify-content: space-between;
+  width: 85%;
 }
 
 .carousel-nav-btn {
@@ -41,7 +47,7 @@
 .carousel-dots-div {
   display: flex;
   gap: 5px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .carousel-dot:hover {

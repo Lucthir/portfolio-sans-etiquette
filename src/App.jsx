@@ -10,6 +10,7 @@ import Menu from "./components/Menu";
 import { Link } from "react-router-dom";
 import "./App.css";
 import BackButton from "./components/BackButton";
+import InstagramIcon from "./assets/icons/instagram.png";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,6 +30,9 @@ export default function App() {
           <Link to="/" className="header-logo">
             MARTIN MORDA-COTEL
           </Link>
+          <a href="https://www.instagram.com/sans_etiquette">
+            <img src={InstagramIcon} alt="" className="instagram-img" />
+          </a>
         </div>
         <div className="header-bottom">
           <BackButton></BackButton>

@@ -5,7 +5,8 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
-  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +25,11 @@
 .lightbox-close-div {
   display: flex;
   justify-content: end;
-  width: 80%;
+  width: 90%;
+}
+
+.lightbox-close-img {
+  width: 52px;
 }
 
 .lightbox-nav-media-div {

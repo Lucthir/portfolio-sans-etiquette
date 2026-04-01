@@ -35,10 +35,12 @@ function Carousel() {
 
   return (
     <div className="carousel-main-div">
-      <div className="carousel-content-div" style={{ transform: `translateX(-${(carouselIndex - 1) * 33.33}%)` }}>
-        {extendedPhotos.map((photoUrl, index) => (
-          <CarouselItem key={index} photoSrc={photoUrl}></CarouselItem>
-        ))}
+      <div className="carousel-mask-content-div">
+        <div className="carousel-content-div" style={{ transform: `translateX(-${(carouselIndex - 1) * 33.33}%)` }}>
+          {extendedPhotos.map((photoUrl, index) => (
+            <CarouselItem key={index} photoSrc={photoUrl}></CarouselItem>
+          ))}
+        </div>
       </div>
       <div className="carousel-nav-div">
         <button className="carousel-nav-btn carousel-previous-btn" onClick={prev}>
