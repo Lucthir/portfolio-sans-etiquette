@@ -124,11 +124,17 @@
   /* height: 200px; */
   width: 100%;
   /* outline: 2px solid blue; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
+}
+
+.partenaires-div video {
+  height: 300px;
+  max-width: 100%;
 }
 
 .contact-div {
@@ -158,6 +164,11 @@
     width: 100%;
   }
 
+  .caroussel-div {
+    /* height: 200px; */
+    display: none;
+  }
+
   .category-div {
     width: auto;
     height: 25%;
@@ -165,5 +176,6 @@
 
   .category-illustration-filter {
     visibility: visible;
+    background-color: none;
   }
 }

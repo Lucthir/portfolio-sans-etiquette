@@ -30,7 +30,13 @@ export async function listS3Files(prefix) {
 }
 
 export async function getProjectMeta(type, projectSlug) {
-    const url = `${AWS_CONFIG.CDN_URL}/gallery/${type}/${projectSlug}/metadata.json`;
-    const res = await fetch(url);
-    return res.json(); // { title, cover, description }
+    try {
+        const url = `${AWS_CONFIG.CDN_URL}/gallery/${type}/${projectSlug}/metadata.json`;
+        const res = await fetch(url);
+        if (!res.ok) return null;
+        return res.json(); // { title, cover, description }
+    } catch {
+        return null
+    }
+
 }

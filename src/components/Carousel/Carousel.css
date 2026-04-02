@@ -53,3 +53,7 @@
 .carousel-dot:hover {
   cursor: pointer;
 }
+
+.carousel-dot {
+  width: 25px;
+}

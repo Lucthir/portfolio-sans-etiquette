@@ -42,3 +42,27 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .photo-project-content-div {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    padding: 80px 15px;
+  }
+
+  .photo-project-img-div.landscape {
+    grid-column: span 1;
+  }
+
+  .lightbox {
+    display: none;
+  }
+
+  .photo-project-img-filter {
+    display: none;
+  }
+
+  .photo-project-img-div:hover {
+    cursor: default;
+  }
+}

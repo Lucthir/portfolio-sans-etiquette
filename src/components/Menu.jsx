@@ -8,15 +8,28 @@ function Menu({ isOpen, onClose }) {
         <Link to="/" className="menu-btn" onClick={onClose}>
           ACCUEIL
         </Link>
-        <Link to="/videos" className="menu-btn" onClick={onClose}>
-          PROJETS VIDEO
-        </Link>
         <Link to="/photos" className="menu-btn" onClick={onClose}>
           PROJETS PHOTO
         </Link>
-        <Link to="/photos" className="menu-btn" onClick={onClose}>
-          CONTACT
+        <Link to="/videos" className="menu-btn" onClick={onClose}>
+          PROJETS VIDEO
         </Link>
+        {/* <Link to="/#contact" className="menu-btn" onClick={onClose}>
+          CONTACT
+        </Link> */}
+        <a
+          className="menu-btn"
+          href="/#contact"
+          onClick={(e) => {
+            const el = document.querySelector("#contact");
+            if (el) {
+              e.preventDefault();
+              el.scrollIntoView({ behavior: "smooth" });
+            }
+            onClose();
+          }}>
+          CONTACT
+        </a>
       </div>
     </div>
   );

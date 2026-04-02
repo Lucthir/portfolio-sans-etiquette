@@ -15,7 +15,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="home-main-div">
+    <div className="home-main-div" id="top">
       <div className="home-content-div">
         <div className="hero-div">
           <div className="hero-title-div">
@@ -49,11 +49,11 @@ function Home() {
         </div>
         <div className="partenaires-div">
           <h2>Partenaires</h2>
-          <video height="300px;" autoPlay loop muted>
+          <video autoPlay loop muted>
             <source src={partenairesVideo} type="video/mp4" />
           </video>
         </div>
-        <div className="contact-div">
+        <div className="contact-div" id="contact">
           <p>Martin MORDA-COTEL</p>
           <p>06XXXXXXXX</p>
           <p>Paris/Genève</p>

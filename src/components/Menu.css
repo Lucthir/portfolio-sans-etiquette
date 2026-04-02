@@ -4,7 +4,7 @@
   height: 250px;
   top: 75px;
   left: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
   z-index: 12;
   transition:
     opacity 0.5s ease,
@@ -36,5 +36,25 @@
 }
 
 .menu-btn:hover {
-  color: #ca6a32;
+  color: #868686;
+}
+
+@media (max-width: 768px) {
+  .menu-div {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+
+  .menu-content {
+    align-items: center;
+    gap: 15px;
+    padding: 0px;
+  }
+
+  .menu-btn {
+    color: black;
+  }
 }

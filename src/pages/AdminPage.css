@@ -1,0 +1,221 @@
+.admin-auth-div {
+  min-height: 100vh;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-auth-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+  color: white;
+}
+
+.admin-auth-box h2 {
+  font-size: 1.2em;
+  letter-spacing: 4px;
+  margin: 0 0 10px 0;
+}
+
+.admin-auth-box p {
+  color: #868686;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.admin-auth-box input {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px 15px;
+  font-size: 1em;
+  outline: none;
+}
+
+.admin-auth-box input.input-error {
+  border-color: #e05a5a;
+}
+
+.admin-auth-box button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.admin-auth-box button:hover {
+  background-color: #cccccc;
+}
+
+.error-msg {
+  color: #e05a5a;
+  font-size: 0.85em;
+}
+
+/* Main */
+
+.admin-main-div {
+  min-height: 100vh;
+  background-color: #111111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px 60px 20px;
+}
+
+.admin-content-div {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-content-div h2 {
+  font-size: 1.2em;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.admin-subtitle {
+  color: #868686;
+  font-size: 0.9em;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-field label {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  color: #868686;
+  text-transform: uppercase;
+}
+
+.admin-field input,
+.admin-field select,
+.admin-field textarea {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px 15px;
+  font-size: 0.95em;
+  outline: none;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.admin-field select option {
+  background-color: #1e1e1e;
+}
+
+.admin-field input:focus,
+.admin-field select:focus,
+.admin-field textarea:focus {
+  border-color: #666;
+}
+
+.admin-toggle {
+  display: flex;
+  gap: 0;
+}
+
+.admin-toggle button {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #868686;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+.admin-toggle button.toggle-active {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.admin-hint {
+  color: #868686;
+  font-size: 0.85em;
+  margin: 0;
+}
+
+.admin-preview img {
+  max-width: 200px;
+  max-height: 150px;
+  object-fit: cover;
+  margin-top: 8px;
+  border: 1px solid #333;
+}
+
+.admin-json-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-json-preview label {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  color: #868686;
+  text-transform: uppercase;
+}
+
+.admin-json-preview pre {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  padding: 15px;
+  font-size: 0.85em;
+  color: #aaaaaa;
+  margin: 0;
+  font-family: monospace;
+  line-height: 1.6;
+}
+
+.admin-generate-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.admin-generate-btn:hover:not(:disabled) {
+  background-color: #cccccc;
+}
+
+.admin-generate-btn:disabled {
+  background-color: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+code {
+  background-color: #1e1e1e;
+  padding: 2px 6px;
+  font-size: 0.85em;
+  color: #aaaaaa;
+}

@@ -11,6 +11,7 @@ function PhotoProjectGallery({ projectId }) {
   const [thumbnails, setThumbnails] = useState([]);
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
+  const isMobile = window.innerWidth <= 768;
 
   const IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "webp", "gif"];
 
@@ -42,6 +43,7 @@ function PhotoProjectGallery({ projectId }) {
             key={url}
             className="photo-project-img-div"
             onClick={() => {
+              if (isMobile) return;
               setLightboxIndex(index);
               setLightboxIsOpen(true);
             }}>
@@ -62,6 +64,7 @@ function PhotoProjectGallery({ projectId }) {
         ))}
       </div>
       <LightboxMedia
+        className="lightbox"
         photos={photos}
         currentIndex={lightboxIndex}
         isOpen={lightboxIsOpen}

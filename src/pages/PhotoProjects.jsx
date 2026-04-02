@@ -15,9 +15,9 @@ function PhotoProjects() {
           const meta = await getProjectMeta("photos", slug);
           return {
             slug,
-            title: meta.title,
-            cover: `${AWS_CONFIG.CDN_URL}/gallery/photos/${slug}/thumbnails/${meta.cover}`,
-            description: meta.description,
+            title: meta?.title ?? slug,
+            cover: meta?.cover ? `${AWS_CONFIG.CDN_URL}/gallery/photos/${slug}/thumbnails/${meta.cover}` : null,
+            description: meta?.description ?? "",
           };
         }),
       );
