@@ -5,12 +5,21 @@ import Carousel from "./../components/Carousel/Carousel";
 import InstagramIcon from "./../assets/icons/instagram.png";
 
 function Home() {
-  // const mainBackground = `${AWS_CONFIG.CDN_URL}/static/home/test_main_bg.png`;
-  const portraitsIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/vietnam.jpg`;
-  // const category3Illustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/woman.jpg`;
-  const category4Illustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/concert.jpg`;
+  const photosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/vietnam.jpg`;
+  const videosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/screenshot_HM.jpg`;
   const bioPhotography = `${AWS_CONFIG.CDN_URL}/static/home/martin_test_bio.jpg`;
-  const partenairesVideo = `${AWS_CONFIG.CDN_URL}/static/home/partenaires.mp4`;
+  // const partenairesVideo = `${AWS_CONFIG.CDN_URL}/static/home/partenaires.mp4`;
+  const partenairesLogos = [
+    `${AWS_CONFIG.CDN_URL}/static/logos/CNP.png`,
+    `${AWS_CONFIG.CDN_URL}/static/logos/Credit-Agricole.png`,
+    `${AWS_CONFIG.CDN_URL}/static/logos/Dakar.png`,
+    `${AWS_CONFIG.CDN_URL}/static/logos/Lions Festival.png`,
+    `${AWS_CONFIG.CDN_URL}/static/logos/loreal.png`,
+    `${AWS_CONFIG.CDN_URL}/static/logos/Qonto.png`,
+    `${AWS_CONFIG.CDN_URL}/static/logos/Renault.png`,
+    `${AWS_CONFIG.CDN_URL}/static/logos/videlio.png`,
+    `${AWS_CONFIG.CDN_URL}/static/logos/WEF.png`,
+  ];
 
   const navigate = useNavigate();
 
@@ -38,26 +47,32 @@ function Home() {
             <div className="category-illustration-filter" onClick={() => navigate("/photos")}>
               <h2>// Photos</h2>
             </div>
-            <img src={portraitsIllustration} alt="" />
+            <img src={photosIllustration} alt="" />
           </div>
           <div className="videos-category-div category-div">
             <div className="category-illustration-filter" onClick={() => navigate("/videos")}>
               <h2>// Videos</h2>
             </div>
-            <img src={category4Illustration} alt="" />
+            <img src={videosIllustration} alt="" />
           </div>
         </div>
         <div className="partenaires-div">
-          <h2>Partenaires</h2>
-          <video autoPlay loop muted>
-            <source src={partenairesVideo} type="video/mp4" />
-          </video>
+          <h4>Partenaires</h4>
+          <div className="partenaires-logos-div">
+            {partenairesLogos.map((logo, index) => (
+              <img src={logo} key={index} alt="" className="partenaires-logo" />
+            ))}
+          </div>
         </div>
         <div className="contact-div" id="contact">
-          <p>Martin MORDA-COTEL</p>
-          <p>06XXXXXXXX</p>
-          <p>Paris/Genève</p>
-          <p>sans-etiquette@gmail.com</p>
+          <h4>Contact</h4>
+          <p>
+            Martin MORDA-COTEL <br />
+            +33 6 71 94 88 64 <br />
+            Paris/Genève <br />
+            sansetiquette@outlook.fr
+          </p>
+
           <a href="https://www.instagram.com/sans_etiquette">
             <img src={InstagramIcon} alt="" className="instagram-img" />
           </a>

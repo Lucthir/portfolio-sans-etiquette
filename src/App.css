@@ -47,7 +47,23 @@
   color: white;
 }
 
+.menu-icon-mobile {
+  width: 25px;
+  color: white;
+  display: none;
+}
+
 .header-logo {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .menu-icon-mobile {
+    display: block;
+  }
 }

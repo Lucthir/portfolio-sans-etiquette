@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import BackButton from "./components/BackButton";
 import CloseIcon from "./assets/icons/close_white.png";
+import CloseIconBlack from "./assets/icons/close_black.png";
 import InstagramIcon from "./assets/icons/instagram.png";
 import ScrollToAnchor from "./components/ScrollToAnchor";
 import AdminPage from "./pages/AdminPage";
@@ -29,6 +30,7 @@ export default function App() {
               setMenuOpen(!menuOpen);
             }}>
             <img src={!menuOpen ? MenuIcon : CloseIcon} alt="" className="menu-icon" />
+            <img src={!menuOpen ? MenuIcon : CloseIconBlack} alt="" className="menu-icon-mobile" />
           </button>
           <BackButton></BackButton>
         </div>

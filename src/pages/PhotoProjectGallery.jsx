@@ -52,7 +52,7 @@ function PhotoProjectGallery({ projectId }) {
               alt="test"
               src={url}
               className="photo-project-img"
-              // loading="lazy"
+              loading="lazy"
               onLoad={(e) => {
                 const img = e.target;
                 if (img.naturalWidth > img.naturalHeight) {
