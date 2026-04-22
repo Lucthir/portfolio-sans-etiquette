@@ -15,8 +15,8 @@ function AdminPage() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [cover, setCover] = useState("");
-  const [thumbnails, setThumbnails] = useState([]);
-  const [loadingThumbnails, setLoadingThumbnails] = useState(false);
+  const [fullscales, setFullscales] = useState([]);
+  const [loadingFullscales, setLoadingFullscales] = useState(false);
   const [success, setSuccess] = useState(false);
 
   // Charge les slugs existants quand on change de type
@@ -26,20 +26,20 @@ function AdminPage() {
     listS3Folders(`gallery/${type}/`).then(setSlugList);
   }, [type]);
 
-  // Charge les thumbnails quand on change de slug
+  // Charge les fullscale quand on change de slug
   useEffect(() => {
     if (!slug) {
-      setThumbnails([]);
+      setFullscales([]);
       setCover("");
       return;
     }
-    setLoadingThumbnails(true);
+    setLoadingFullscales(true);
     setCover("");
-    listS3Files(`gallery/${type}/${slug}/thumbnails`).then((files) => {
+    listS3Files(`gallery/${type}/${slug}/fullscale`).then((files) => {
       // On garde uniquement le nom du fichier
       const names = files.map((url) => url.split("/").pop());
-      setThumbnails(names);
-      setLoadingThumbnails(false);
+      setFullscales(names);
+      setLoadingFullscales(false);
     });
   }, [slug, type]);
 
@@ -135,14 +135,14 @@ function AdminPage() {
             <label>Image de couverture</label>
             {!slug ? (
               <p className="admin-hint">Sélectionnez d'abord un projet.</p>
-            ) : loadingThumbnails ? (
+            ) : loadingFullscales ? (
               <p className="admin-hint">Chargement des images...</p>
-            ) : thumbnails.length === 0 ? (
-              <p className="admin-hint">Aucun thumbnail trouvé dans ce dossier.</p>
+            ) : fullscales.length === 0 ? (
+              <p className="admin-hint">Aucune image trouvée dans ce dossier.</p>
             ) : (
               <select value={cover} onChange={(e) => setCover(e.target.value)}>
                 <option value="">— Choisir une image —</option>
-                {thumbnails.map((name) => (
+                {fullscales.map((name) => (
                   <option key={name} value={name}>
                     {name}
                   </option>
@@ -154,7 +154,7 @@ function AdminPage() {
           {cover && slug && (
             <div className="admin-preview">
               <p className="admin-hint">Aperçu de la couverture :</p>
-              <img src={`${process.env.REACT_APP_CDN_URL}/gallery/${type}/${slug}/thumbnails/${cover}`} alt="cover preview" />
+              <img src={`${process.env.REACT_APP_CDN_URL}/gallery/${type}/${slug}/fullscale/${cover}`} alt="cover preview" />
             </div>
           )}
 

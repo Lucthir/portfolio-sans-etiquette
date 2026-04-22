@@ -5,9 +5,9 @@ import Carousel from "./../components/Carousel/Carousel";
 import InstagramIcon from "./../assets/icons/instagram.png";
 
 function Home() {
-  const photosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/vietnam.jpg`;
+  const photosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/categorie_photo.jpg`;
   const videosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/screenshot_HM.jpg`;
-  const bioPhotography = `${AWS_CONFIG.CDN_URL}/static/home/martin_test_bio.jpg`;
+  const bioPhotography = `${AWS_CONFIG.CDN_URL}/static/home/caroussel/05_static.jpg`;
   // const partenairesVideo = `${AWS_CONFIG.CDN_URL}/static/home/partenaires.mp4`;
   const partenairesLogos = [
     `${AWS_CONFIG.CDN_URL}/static/logos/CNP.png`,

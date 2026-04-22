@@ -16,7 +16,7 @@ function PhotoProjects() {
           return {
             slug,
             title: meta?.title ?? slug,
-            cover: meta?.cover ? `${AWS_CONFIG.CDN_URL}/gallery/photos/${slug}/thumbnails/${meta.cover}` : null,
+            cover: meta?.cover ? `${AWS_CONFIG.CDN_URL}/gallery/photos/${slug}/fullscale/${meta.cover}` : null,
             description: meta?.description ?? "",
           };
         }),

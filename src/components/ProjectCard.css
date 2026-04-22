@@ -28,6 +28,10 @@
   object-fit: cover;
 }
 
+.project-card-description {
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
   .project-card-main-div {
     width: 100%;

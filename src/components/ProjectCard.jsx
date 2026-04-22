@@ -8,7 +8,7 @@ function ProjectCard({ slug, projectType, projectName, projectIllustration, proj
     <div className="project-card-main-div">
       <div className="project-illustration-filter" onClick={() => navigate(`/${projectType}/${slug}`)}>
         <h2>// {projectName}</h2>
-        <p>{projectDescription}</p>
+        <p className="project-card-description">{projectDescription}</p>
       </div>
       <img src={projectIllustration} alt="" className="project-illustration" />
     </div>
