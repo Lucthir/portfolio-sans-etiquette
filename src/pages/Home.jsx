@@ -7,7 +7,7 @@ import InstagramIcon from "./../assets/icons/instagram.png";
 function Home() {
   const photosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/categorie_photo.jpg`;
   const videosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/screenshot_HM.jpg`;
-  const bioPhotography = `${AWS_CONFIG.CDN_URL}/static/home/caroussel/05_static.jpg`;
+  // const bioPhotography = `${AWS_CONFIG.CDN_URL}/static/home/caroussel/05_static.jpg`;
   // const partenairesVideo = `${AWS_CONFIG.CDN_URL}/static/home/partenaires.mp4`;
   const partenairesLogos = [
     `${AWS_CONFIG.CDN_URL}/static/logos/CNP.png`,
@@ -31,7 +31,7 @@ function Home() {
             <h1>SANS ÉTIQUETTE</h1>
           </div>
           <div className="hero-content-div">
-            <img src={bioPhotography} alt="" className="hero-img" />
+            {/* <img src={bioPhotography} alt="" className="hero-img" /> */}
             <p className="hero-description">
               Ingénieur du son & Producteur vidéo indépendant spécialisé dans la captation live et le streaming corporate, je justifie de plus de 6 ans d'expérience dans l'audiovisuel. Expert en
               réalisation multicam et gestion sonore complexe pour des événements d'envergure internationale (World Economic Forum, L’Oréal). Basé entre Paris et Genève, j'apporte une solution
