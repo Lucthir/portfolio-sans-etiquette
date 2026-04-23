@@ -9,13 +9,14 @@ import ArrowForward from "./../../assets/icons/arrow_forward.png";
 
 function Carousel() {
   const photos = [
-    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/33_static.JPG`,
-    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/10_static.jpg`,
-    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/15_static.JPG`,
+    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/01_static.JPG`,
     `${AWS_CONFIG.CDN_URL}/static/home/caroussel/04_static.JPG`,
-    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/17_static.JPG`,
+    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/06_static.jpg`,
+    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/10_static.jpg`,
     `${AWS_CONFIG.CDN_URL}/static/home/caroussel/13_static.JPG`,
-    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/29_static.jpg`,
+    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/15_static.JPG`,
+    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/17_static.JPG`,
+    `${AWS_CONFIG.CDN_URL}/static/home/caroussel/21_static.jpg`,
   ];
 
   const extendedPhotos = [

@@ -45,13 +45,13 @@ function Home() {
         <div className="categories-div">
           <div className="photos-category-div category-div">
             <div className="category-illustration-filter" onClick={() => navigate("/photos")}>
-              <h2>// Photos</h2>
+              <h2>Photos</h2>
             </div>
             <img src={photosIllustration} alt="" />
           </div>
           <div className="videos-category-div category-div">
             <div className="category-illustration-filter" onClick={() => navigate("/videos")}>
-              <h2>// Videos</h2>
+              <h2>Videos</h2>
             </div>
             <img src={videosIllustration} alt="" />
           </div>
