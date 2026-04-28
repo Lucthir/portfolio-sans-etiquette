@@ -40,3 +40,13 @@ export async function getProjectMeta(type, projectSlug) {
     }
 
 }
+
+const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+const VIDEO_EXTENSIONS = ['mp4', 'mov', 'avi', 'webm'];
+
+export function getMediaType(url) {
+    const ext = url.split('.').pop().toLowerCase();
+    if (IMAGE_EXTENSIONS.includes(ext)) return 'image';
+    if (VIDEO_EXTENSIONS.includes(ext)) return 'video';
+    return null;
+}

@@ -1,7 +1,7 @@
 import "./VideoProjectGallery.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { listS3Files } from "../config/aws";
+import { listS3Files, getMediaType } from "../config/aws";
 import VideoPlayer from "./../components/VideoPlayer";
 
 function VideoProjectGallery({ projectId }) {
@@ -15,22 +15,21 @@ function VideoProjectGallery({ projectId }) {
   return (
     <div className="video-project-main-div">
       <div className="video-project-content-div">
-        {files.map((url) => (
-          // <video
-          //   key={url}
-          //   src={url}
-          //   controls
-          //   className="video-project-media"
-          //   onLoadedData={(e) => {
-          //     console.log(e.target.videoHeight);
-          //     const vid = e.target;
-          //     if (vid.videoWidth < vid.videoHeight) {
-          //       vid.classList.add("portrait");
-          //     }
-          //   }}
-          // />
+        {/* {files.map((url) => (
           <VideoPlayer src={url}></VideoPlayer>
-        ))}
+        ))} */}
+        <div className="video-project-images-grid">
+          {files
+            .filter((url) => getMediaType(url) === "image")
+            .map((url) => (
+              <img key={url} src={url} alt="" className="video-project-img" />
+            ))}
+        </div>
+        {files
+          .filter((url) => getMediaType(url) === "video")
+          .map((url) => (
+            <VideoPlayer key={url} src={url} />
+          ))}
       </div>
     </div>
   );
