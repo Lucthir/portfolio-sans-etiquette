@@ -66,17 +66,27 @@ function Home() {
           </div>
         </div>
         <div className="contact-div" id="contact">
-          <h4>Contact</h4>
-          <p>
-            Martin MORDA-COTEL <br />
-            +33 6 71 94 88 64 <br />
-            Paris/Genève <br />
-            sansetiquette@outlook.fr
-          </p>
-
-          <a href="https://www.instagram.com/sans_etiquette">
-            <img src={InstagramIcon} alt="" className="instagram-img" />
-          </a>
+          <h3 className="contact-title">Contact</h3>
+          <div className="contact-content">
+            <div className="contact-content-left">
+              <p>
+                <b>Martin MORDA-COTEL</b>
+                <br />
+                <i>Paris/Genève</i>
+              </p>
+            </div>
+            <div className="contact-content-right">
+              <adress>
+                <a href="mailto:sansetiquette@outlook.fr">sansetiquette@outlook.fr</a>
+                <a href="tel:+33671948864">+33 6 71 94 88 64</a>
+              </adress>
+              <div className="contact-insta">
+                <a href="https://www.instagram.com/sans_etiquette">
+                  <img src={InstagramIcon} alt="" className="instagram-img" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
