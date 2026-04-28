@@ -10,6 +10,7 @@
   grid-auto-rows: 300px;
   gap: 8px;
   padding: 100px 30px;
+  grid-auto-flow: dense;
 }
 
 .photo-project-img-div {

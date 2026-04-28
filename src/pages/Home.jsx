@@ -33,9 +33,10 @@ function Home() {
           <div className="hero-content-div">
             {/* <img src={bioPhotography} alt="" className="hero-img" /> */}
             <p className="hero-description">
-              Ingénieur du son & Producteur vidéo indépendant spécialisé dans la captation live et le streaming corporate, je justifie de plus de 6 ans d'expérience dans l'audiovisuel. Expert en
-              réalisation multicam et gestion sonore complexe pour des événements d'envergure internationale (World Economic Forum, L’Oréal). Basé entre Paris et Genève, j'apporte une solution
-              technique complète et rigoureuse pour vos projets de communication en direct.
+              Après cinq années à mettre mon expertise technique au service de la réalisation de streaming en direct pour des clients prestigieux tels que L’Oréal, Crédit Agricole et le World Economic
+              Forum, je vous propose désormais des solutions de communication clé en main pour vos événements. <br />
+              <br /> De la prise de vue photo et vidéo à la captation sonore, je m’adapte à vos exigences et vous accompagne à chaque étape de votre projet. <br />
+              <br /> Conseil, gestion de projet, expertise technique et suivi global : je mets tout en œuvre pour garantir la réussite de vos contenus.
             </p>
           </div>
         </div>
