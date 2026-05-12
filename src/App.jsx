@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Home from "./pages/Home";
 import VideoProjects from "./pages/VideoProjects";
 import PhotoProjects from "./pages/PhotoProjects";
 import VideoProjectGallery from "./pages/VideoProjectGallery";
 import PhotoProjectGallery from "./pages/PhotoProjectGallery";
+import Contact from "./pages/Contact";
 import MenuIcon from "./assets/icons/burger_white.png";
 import Menu from "./components/Menu";
-import { Link } from "react-router-dom";
 import "./App.css";
 import BackButton from "./components/BackButton";
 import CloseIcon from "./assets/icons/close_white.png";
@@ -29,16 +29,12 @@ export default function App() {
             onClick={() => {
               setMenuOpen(!menuOpen);
             }}>
-            <img src={!menuOpen ? MenuIcon : CloseIcon} alt="" className="menu-icon" />
-            <img src={!menuOpen ? MenuIcon : CloseIconBlack} alt="" className="menu-icon-mobile" />
+            <img src={!menuOpen ? MenuIcon : CloseIcon} alt="icône de menu" className="menu-icon" />
+            <img src={!menuOpen ? MenuIcon : CloseIconBlack} alt="icône de menu" className="menu-icon-mobile" />
           </button>
           <BackButton></BackButton>
         </div>
         <div className="header-top-right">
-          {/* <Link to="/#top" className="header-logo">
-            MARTIN MORDA-COTEL
-          </Link> */}
-
           <a
             className="header-logo"
             href="/#top"
@@ -51,8 +47,8 @@ export default function App() {
             }}>
             MARTIN MORDA-COTEL
           </a>
-          <a href="https://www.instagram.com/sans_etiquette">
-            <img src={InstagramIcon} alt="" className="instagram-img" />
+          <a href="https://www.instagram.com/sans_etiquette" target="_blank" rel="noopener noreferrer">
+            <img src={InstagramIcon} alt="icône Instagram" className="instagram-img" />
           </a>
         </div>
       </div>
@@ -63,6 +59,7 @@ export default function App() {
         <Route path="/photos" element={<PhotoProjects />} />
         <Route path="/videos/:slug" element={<VideoProjectGallery />}></Route>
         <Route path="/photos/:slug" element={<PhotoProjectGallery />}></Route>
+        <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<AdminPage />} />
       </Routes>
     </BrowserRouter>

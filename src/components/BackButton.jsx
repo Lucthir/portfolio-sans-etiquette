@@ -20,7 +20,7 @@ export default function BackButton({ to, children = "Retour" }) {
 
   return (
     <button className="header-back-button" onClick={handleBack}>
-      <img src={ArrowBackIcon} alt="" />
+      <img src={ArrowBackIcon} alt="bouton retour" />
     </button>
   );
 }

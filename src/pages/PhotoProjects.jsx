@@ -1,9 +1,9 @@
 import ProjectCard from "./../components/ProjectCard";
 import "./PhotoProjects.css";
-import { Link } from "react-router-dom";
 import { AWS_CONFIG } from "../config/aws";
 import { useEffect, useState } from "react";
 import { listS3Folders, getProjectMeta } from "../config/aws";
+import { Helmet } from "react-helmet-async";
 
 function PhotoProjects() {
   const [projects, setProjects] = useState([]);
@@ -26,13 +26,22 @@ function PhotoProjects() {
   }, []);
 
   return (
-    <div className="photos-main-div">
-      <div className="photos-content-div">
-        {projects.map(({ slug, title, cover, description }) => (
-          <ProjectCard key={slug} slug={slug} projectType="photos" projectName={title} projectIllustration={cover} projectDescription={description}></ProjectCard>
-        ))}
+    <>
+      <Helmet>
+        <title>Projets Photo — Sans Étiquette</title>
+        <meta name="description" content="Découvrez les projets photographiques de Martin Morda-Cotel : portraits, événements, reportages en France et en Suisse." />
+        <meta property="og:title" content="Projets Photo — Sans Étiquette" />
+        <meta property="og:description" content="Découvrez les projets photographiques de Martin Morda-Cotel : portraits, événements, reportages en France et en Suisse." />
+        <meta property="og:url" content="https://www.sansetiquette-studio.fr/photos" />
+      </Helmet>
+      <div className="photos-main-div">
+        <div className="photos-content-div">
+          {projects.map(({ slug, title, cover, description }) => (
+            <ProjectCard key={slug} slug={slug} projectType="photos" projectName={title} projectIllustration={cover} projectDescription={description}></ProjectCard>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

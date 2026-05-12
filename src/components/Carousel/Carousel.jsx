@@ -38,16 +38,16 @@ function Carousel() {
       <div className="carousel-mask-content-div">
         <div className="carousel-content-div" style={{ transform: `translateX(-${(carouselIndex - 1) * 33.33}%)` }}>
           {extendedPhotos.map((photoUrl, index) => (
-            <CarouselItem key={index} photoSrc={photoUrl}></CarouselItem>
+            <CarouselItem key={index} index={index} photoSrc={photoUrl}></CarouselItem>
           ))}
         </div>
       </div>
       <div className="carousel-nav-div">
         <button className="carousel-nav-btn carousel-previous-btn" onClick={prev}>
-          <img src={ArrowBack} alt="Previous" />
+          <img src={ArrowBack} alt="bouton précédent" />
         </button>
         <button className="carousel-nav-btn carousel-next-btn" onClick={next}>
-          <img src={ArrowForward} alt="Next" />
+          <img src={ArrowForward} alt="bouton suivant" />
         </button>
       </div>
       <div className="carousel-dots-div">
@@ -56,7 +56,7 @@ function Carousel() {
             className={`carousel-dot ${index === carouselIndex - 1 ? "active" : ""}`}
             key={index}
             src={index === carouselIndex - 1 ? DotChecked : DotUnchecked}
-            alt=""
+            alt="bouton de navigation"
             onClick={() => setCarouselIndex(index + 1)}
           />
         ))}
