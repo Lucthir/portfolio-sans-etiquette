@@ -57,6 +57,8 @@
 
 .hero-img {
   max-height: 100%;
+  height: 100%;
+  width: auto;
 }
 
 .hero-description {
@@ -146,7 +148,7 @@
 
 .partenaires-logo {
   height: 80px;
-  width: auto;
+  width: 100%;
   min-width: 0;
   flex-shrink: 1;
   object-fit: contain;

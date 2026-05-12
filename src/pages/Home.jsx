@@ -5,14 +5,14 @@ import Carousel from "./../components/Carousel/Carousel";
 import { Helmet } from "react-helmet-async";
 
 function Home() {
-  const photosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/categorie_photo.jpg`;
-  const videosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/screenshot_HM.jpg`;
-  const bioPhotography = `${AWS_CONFIG.CDN_URL}/static/home/DSC_2913_(profil).webp`;
+  const photosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/categorie_photo.webp`;
+  const videosIllustration = `${AWS_CONFIG.CDN_URL}/static/home/categories/categorie_video.webp`;
+  const bioPhotography = `${AWS_CONFIG.CDN_URL}/static/home/profil_4.webp`;
   const partenairesLogos = [
     { src: `${AWS_CONFIG.CDN_URL}/static/logos/CNP.png`, name: "CNP Assurances" },
     { src: `${AWS_CONFIG.CDN_URL}/static/logos/Credit-Agricole.png`, name: "Crédit Agricole" },
     { src: `${AWS_CONFIG.CDN_URL}/static/logos/Dakar.png`, name: "Rallye Dakar" },
-    { src: `${AWS_CONFIG.CDN_URL}/static/logos/Lions Festival.png`, name: "Lions Festival" },
+    { src: `${AWS_CONFIG.CDN_URL}/static/logos/Lions_Festival-removebg-preview.png`, name: "Lions Festival" },
     { src: `${AWS_CONFIG.CDN_URL}/static/logos/loreal.png`, name: "L'Oréal" },
     { src: `${AWS_CONFIG.CDN_URL}/static/logos/Qonto.png`, name: "Qonto" },
     { src: `${AWS_CONFIG.CDN_URL}/static/logos/Renault.png`, name: "Renault" },
@@ -32,23 +32,25 @@ function Home() {
       </Helmet>
       <div className="home-main-div" id="top">
         <div className="home-content-div">
-          <div className="hero-div">
-            <div className="hero-title-div">
-              <h1>
-                <span className="hero-title-main">SANS ÉTIQUETTE</span>
-                <span className="hero-title-sub">Photographe & Vidéaste</span>
-              </h1>
+          <main>
+            <div className="hero-div">
+              <div className="hero-title-div">
+                <h1>
+                  <span className="hero-title-main">SANS ÉTIQUETTE</span>
+                  <span className="hero-title-sub">Photographe & Vidéaste</span>
+                </h1>
+              </div>
+              <div className="hero-content-div">
+                <img src={bioPhotography} alt="Photographie de Martin" className="hero-img" fetchpriority="high" />
+                <p className="hero-description">
+                  Après cinq années à mettre mon expertise technique au service de la réalisation de streaming en direct pour des clients prestigieux tels que L’Oréal, Crédit Agricole et le World
+                  Economic Forum, je vous propose désormais des solutions de communication clé en main pour vos événements. <br />
+                  <br /> De la prise de vue photo et vidéo à la captation sonore, je m’adapte à vos exigences et vous accompagne à chaque étape de votre projet. <br />
+                  <br /> Conseil, gestion de projet, expertise technique et suivi global : je mets tout en œuvre pour garantir la réussite de vos contenus.
+                </p>
+              </div>
             </div>
-            <div className="hero-content-div">
-              <img src={bioPhotography} alt="Photographie de Martin" className="hero-img" />
-              <p className="hero-description">
-                Après cinq années à mettre mon expertise technique au service de la réalisation de streaming en direct pour des clients prestigieux tels que L’Oréal, Crédit Agricole et le World
-                Economic Forum, je vous propose désormais des solutions de communication clé en main pour vos événements. <br />
-                <br /> De la prise de vue photo et vidéo à la captation sonore, je m’adapte à vos exigences et vous accompagne à chaque étape de votre projet. <br />
-                <br /> Conseil, gestion de projet, expertise technique et suivi global : je mets tout en œuvre pour garantir la réussite de vos contenus.
-              </p>
-            </div>
-          </div>
+          </main>
           <div className="caroussel-div">
             <Carousel></Carousel>
           </div>
